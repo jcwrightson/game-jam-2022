@@ -6,10 +6,7 @@ using UnityEngine.InputSystem;
 public class LightsaberController : MonoBehaviour
 {
     [SerializeField]
-    private InputActionReference actionRefLH;
-
-     [SerializeField]
-    private InputActionReference actionRefRH;
+    private InputActionReference actionRef;
 
     ParticleSystem system
     {
@@ -26,8 +23,8 @@ public class LightsaberController : MonoBehaviour
 
     void Start()
     {
-        actionRefLH.action.performed += OnTrigger;
-        actionRefRH.action.performed += OnTrigger;
+        actionRef.action.performed += OnTrigger;
+
 
         audioData = GetComponent<AudioSource>();
         if(system.isEmitting){
