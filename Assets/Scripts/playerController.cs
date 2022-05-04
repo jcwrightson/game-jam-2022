@@ -17,6 +17,7 @@ public class playerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody>();
         jumpActionRef.action.performed += OnJump;
+        
     }
 
     void Update()
@@ -40,7 +41,7 @@ public class playerController : MonoBehaviour
                     transform.position.z),
                 transform.TransformDirection(Vector3.down),
                 out hit,
-                1f)
+                1.1f)
         )
         {
             Debug
