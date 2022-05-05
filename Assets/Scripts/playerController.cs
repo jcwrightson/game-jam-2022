@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof (Rigidbody))]
-public class playerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private InputActionReference jumpActionRef;
@@ -12,6 +12,7 @@ public class playerController : MonoBehaviour
     public float jumpForce = 150f;
 
     private Rigidbody body;
+
 
     void Start()
     {

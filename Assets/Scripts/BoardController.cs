@@ -6,9 +6,12 @@ public class BoardController : MonoBehaviour
 {
     public float speed;
 
+    private int totalBlocks = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        totalBlocks = transform.childCount;
     }
 
     // Update is called once per frame
