@@ -17,7 +17,6 @@ public class playerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody>();
         jumpActionRef.action.performed += OnJump;
-        
     }
 
     void Update()

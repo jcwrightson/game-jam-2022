@@ -5,7 +5,6 @@ using UnityEngine;
 public class BlockController : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Transform transform;
     void Start()
     {
     }
@@ -13,12 +12,10 @@ public class BlockController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
-     void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-       Destroy(gameObject);
-    
+        Destroy (gameObject);
     }
 }
