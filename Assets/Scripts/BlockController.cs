@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-    private PlayerProgress player; // Start is called before the first frame update
+    private PlayerProgress player; 
+
+    private LevelController level;
+
+    public int ScoreValue = 1;
+
+    public int RageValue = 1;
 
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<PlayerProgress>();
         player.RageMeter = 100;
+        player.Score = 0;
+
+        level = transform.parent.GetComponent<LevelController>();
     }
 
     // Update is called once per frame
@@ -19,18 +28,19 @@ public class BlockController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Weapons Layer
+        level.CountCollision();
+
+        // Hit
         if (collision.gameObject.layer == 3 & player.RageMeter != 0)
         {
-            // Decrease Rage
-            player.RageMeter -= 1;
+            player.CalmRage (RageValue);
+            player.UpdateScore (ScoreValue);
         }
 
-        // RageCollector Layer
+        // Miss
         if (collision.gameObject.layer == 7 & player.RageMeter != 100)
         {
-            // Increase Rage
-            player.RageMeter += 1;
+            player.AddRage (RageValue);
         }
 
         Destroy (gameObject);

@@ -7,17 +7,32 @@ public class PlayerProgress : MonoBehaviour
 {
     public int RageMeter;
 
-    public TextMeshPro textmeshPro;
+    public int Score;
 
     // Start is called before the first frame update
     void Start()
     {
-        textmeshPro.text = "Rage Level: " + RageMeter.ToString();
+        RageMeter = 0;
+        Score = 0;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        textmeshPro.text = "Rage Level: " + RageMeter.ToString();
+    }
+
+    public void UpdateScore(int value)
+    {
+        Score += value;
+    }
+
+    public void AddRage(int value)
+    {
+        RageMeter += value;
+    }
+
+    public void CalmRage(int value)
+    {
+        RageMeter -= value;
     }
 }

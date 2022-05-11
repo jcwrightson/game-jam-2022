@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RageMeter: 0
+  Score: 0
 --- !u!1 &2693223850646119798
 GameObject:
   m_ObjectHideFlags: 0
