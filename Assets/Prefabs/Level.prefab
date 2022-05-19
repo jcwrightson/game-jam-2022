@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6abea0ca3776ba42a21866912b34e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  difficulty: 1
   prefabs: []
