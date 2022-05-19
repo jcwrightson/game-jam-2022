@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class LevelController : MonoBehaviour
     private List<Vector3> memo = new List<Vector3>();
 
     private int collisions = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -124,6 +126,7 @@ public class LevelController : MonoBehaviour
         if (CalculateNoOfPieces() == collisions)
         {
             Debug.Log("Level Complete");
+            SceneManager.LoadScene(0);
         }
     }
 

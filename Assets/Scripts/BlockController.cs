@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-    private PlayerProgress player; 
+    private PlayerProgress player;
 
     private LevelController level;
 
@@ -28,8 +28,6 @@ public class BlockController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        level.CountCollision();
-
         // Hit
         if (collision.gameObject.layer == 3 & player.RageMeter != 0)
         {
@@ -41,6 +39,12 @@ public class BlockController : MonoBehaviour
         if (collision.gameObject.layer == 7 & player.RageMeter != 100)
         {
             player.AddRage (RageValue);
+            level.CountCollision();
+        }
+
+        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 7)
+        {
+            level.CountCollision();
         }
 
         Destroy (gameObject);
