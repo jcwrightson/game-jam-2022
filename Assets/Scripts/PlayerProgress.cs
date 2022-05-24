@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerProgress
 {
-    public static int Rage = 60;
+    public static int Rage = 30;
 
     public static int Score = 0;
 

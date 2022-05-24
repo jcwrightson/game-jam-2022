@@ -13,16 +13,12 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
-        PlayerProgress.IncScore(1);
-        Debug.Log(PlayerProgress.Score.ToString());
         ResetLevel();
     }
 
     private void ResetLevel()
     {
         BuildLevel(PlayerProgress.Difficulty);
-
-        Debug.Log(PlayerProgress.Score.ToString());
     }
 
     // Update is called once per frame
@@ -153,7 +149,7 @@ public class LevelController : MonoBehaviour
 
     private void isLevelComplete()
     {
-        if (PlayerProgress.Score == CalculateNoOfPieces())
+        if (PlayerProgress.Score == 20)
         {
             // Win
             SceneManager.LoadScene(0);
