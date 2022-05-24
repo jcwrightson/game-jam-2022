@@ -1,47 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerProgress : MonoBehaviour
+public class PlayerProgress
 {
+    public static int Rage = 60;
 
-    public int RageMeter;
+    public static int Score = 0;
 
-    public int Score;
+    public static int Difficulty = 1;
 
-    public Text ScoreText;
 
-    public Text RageText;
-
-    // Start is called before the first frame update
-    void Start()
+    public static void ResetProgress(int s = 0, int r = 60)
     {
-        RageMeter = 0;
-        Score = 0;
+        Score = s;
+        Rage = r;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-    }
-
-    public void UpdateScore(int value)
+    public static void IncScore(int value)
     {
         Score += value;
-        ScoreText.text = Score.ToString();
     }
 
-    public void AddRage(int value)
+    public static void DecScore(int value)
     {
-        RageMeter += value;
-        RageText.text = RageMeter.ToString();
+        Score -= value;
     }
 
-    public void CalmRage(int value)
+    public static void IncRage(int value)
     {
-        RageMeter -= value;
-        RageText.text = RageMeter.ToString();
+        Rage += value;
+    }
+
+    public static void DecRage(int value)
+    {
+        if (Rage - value >= 0)
+        {
+            Rage -= value;
+        }
+        else
+        {
+            Rage = 0;
+        }
+    }
+
+    public static void SelectDifficulty(int value)
+    {
+        Difficulty = value;
     }
 }
