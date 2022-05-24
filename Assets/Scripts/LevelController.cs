@@ -153,13 +153,13 @@ public class LevelController : MonoBehaviour
 
     private void isLevelComplete()
     {
-        if (PlayerProgress.Score >= (CalculateNoOfPieces() / 2))
+        if (PlayerProgress.Score == CalculateNoOfPieces())
         {
             // Win
             SceneManager.LoadScene(0);
         }
 
-        if (PlayerProgress.Rage >= 10)
+        if (PlayerProgress.Rage >= 50)
         {
             // Loss
             SceneManager.LoadScene(0);
