@@ -19,6 +19,8 @@ public class LevelController : MonoBehaviour
     private void ResetLevel()
     {
         BuildLevel(PlayerProgress.Difficulty);
+        PlayerProgress.ResetProgress(0, 30); //Reset the Score back to 0 and rage back to 30
+        PlayerPrefs.SetInt("score", PlayerProgress.Score); //Clear the PlayerPrefs Score Value back to 0, this is the value that is carried over to next scene
     }
 
     // Update is called once per frame
@@ -152,13 +154,15 @@ public class LevelController : MonoBehaviour
         if (PlayerProgress.Score == 20)
         {
             // Win
-            SceneManager.LoadScene(0);
+            PlayerPrefs.SetInt("score", PlayerProgress.Score); //set the PlayerPrefs score which can be accessed from next scene
+            SceneManager.LoadScene(3); //load the win screen
         }
 
         if (PlayerProgress.Rage >= 50)
         {
             // Loss
-            SceneManager.LoadScene(0);
+            PlayerPrefs.SetInt("score", PlayerProgress.Score); //set the PlayerPrefs score which can be accessed from next scene
+            SceneManager.LoadScene(2); //load the fail screen
         }
     }
 }
