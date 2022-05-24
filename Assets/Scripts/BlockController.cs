@@ -4,47 +4,29 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-    private PlayerProgress player;
+    private int ScoreValue = 1;
 
-    private LevelController level;
+    private int RageValue = 1;
 
-    public int ScoreValue = 1;
-
-    public int RageValue = 1;
+    private LevelController levelControl;
 
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerProgress>();
-        player.RageMeter = 100;
-        player.Score = 0;
-
-        level = transform.parent.GetComponent<LevelController>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        levelControl = transform.parent.GetComponent<LevelController>();
     }
 
     void OnCollisionEnter(Collision collision)
     {
         // Hit
-        if (collision.gameObject.layer == 3 & player.RageMeter != 0)
+        if (collision.gameObject.layer == 3)
         {
-            player.CalmRage (RageValue);
-            player.UpdateScore (ScoreValue);
+            levelControl.Hit (ScoreValue, RageValue);
         }
 
         // Miss
-        if (collision.gameObject.layer == 7 & player.RageMeter != 100)
+        if (collision.gameObject.layer == 7)
         {
-            player.AddRage (RageValue);
-            level.CountCollision();
-        }
-
-        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 7)
-        {
-            level.CountCollision();
+            levelControl.Miss (ScoreValue, RageValue);
         }
 
         Destroy (gameObject);
