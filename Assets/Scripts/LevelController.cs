@@ -5,24 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    public int difficulty; // 1: Easy, 2: Med, 3: Hard, 4: Insane!!
-
     public List<GameObject> prefabs;
 
     private List<Vector3> memo = new List<Vector3>();
 
-    private int collisions = 0;
+    private PlayerProgress progress;
 
-
-    // Start is called before the first frame update
     void Start()
+    {
+        ResetLevel();
+    }
+
+    private void ResetLevel()
+    {
+        BuildLevel(PlayerProgress.Difficulty);
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        transform.position =
+            new Vector3(transform.position.x,
+                transform.position.y,
+                transform.position.z - CalculateMovement());
+    }
+
+    private void BuildLevel(int dif)
     {
         for (var i = 0; i < CalculateNoOfPieces(); i++)
         {
             // Pick a random object to spawn
             int idx = UnityEngine.Random.Range(0, prefabs.Count);
 
-            Vector3 pos = buildPosition(i, difficulty);
+            Vector3 pos = buildPosition(i, dif);
 
             Instantiate(prefabs[idx], pos, transform.rotation, transform);
         }
@@ -99,12 +114,12 @@ public class LevelController : MonoBehaviour
 
     public int CalculateNoOfPieces()
     {
-        return difficulty * 100;
+        return PlayerProgress.Difficulty * 100;
     }
 
     private float CalculateMovement()
     {
-        switch (difficulty)
+        switch (PlayerProgress.Difficulty)
         {
             case 1:
                 return 0.1f;
@@ -119,23 +134,31 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    public void CountCollision()
+    public void Hit(int scoreValue, int rageValue)
     {
-        collisions += 1;
-
-        if (CalculateNoOfPieces() == collisions)
-        {
-            Debug.Log("Level Complete");
-            SceneManager.LoadScene(0);
-        }
+        PlayerProgress.DecRage (rageValue);
+        PlayerProgress.IncScore (scoreValue);
+        isLevelComplete();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    public void Miss(int scoreValue, int rageValue)
     {
-        transform.position =
-            new Vector3(transform.position.x,
-                transform.position.y,
-                transform.position.z - CalculateMovement());
+        PlayerProgress.IncRage (rageValue);
+        isLevelComplete();
+    }
+
+    private void isLevelComplete()
+    {
+        if (PlayerProgress.Score == 20)
+        {
+            // Win
+            SceneManager.LoadScene(0);
+        }
+
+        if (PlayerProgress.Rage >= 50)
+        {
+            // Loss
+            SceneManager.LoadScene(0);
+        }
     }
 }
