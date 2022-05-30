@@ -17,6 +17,7 @@ public class LightsaberController : MonoBehaviour
             return _CachedSystem;
         }
     }
+
     private ParticleSystem _CachedSystem;
 
     AudioSource audioData;
@@ -25,24 +26,24 @@ public class LightsaberController : MonoBehaviour
     {
         actionRef.action.performed += OnTrigger;
 
-
         audioData = GetComponent<AudioSource>();
-        if(system.isEmitting){
-			audioData.Play(0);
+        if (system.isEmitting)
+        {
+            audioData.Play(0);
         }
-        
     }
 
-
-    private void OnTrigger(InputAction.CallbackContext obj){
-        if(system.isEmitting){
+    private void OnTrigger(InputAction.CallbackContext obj)
+    {
+        if (system.isEmitting)
+        {
             system.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             audioData.Stop();
+            GetComponent<Collider>().enabled = false;
             return;
         }
         system.Play(true);
         audioData.Play(0);
-
+        GetComponent<Collider>().enabled = true;
     }
-
 }
