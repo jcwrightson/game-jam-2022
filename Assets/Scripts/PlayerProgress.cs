@@ -11,6 +11,7 @@ public class PlayerProgress
     public static int Difficulty = 1;
 
 
+
     public static void ResetProgress(int s = 0, int r = 60)
     {
         Score = s;

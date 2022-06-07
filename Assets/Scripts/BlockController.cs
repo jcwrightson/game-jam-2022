@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-    private int ScoreValue = 1;
+    public int ScoreValue = 1;
 
-    private int RageValue = 1;
+    public int RageValue = 1;
 
     private LevelController levelControl;
 
