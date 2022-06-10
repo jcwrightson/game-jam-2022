@@ -46,7 +46,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4176461369329732772}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 4
   simulationSpeed: 25
   stopAction: 0
   cullingMode: 0
@@ -3817,9 +3817,9 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 1
-    light: {fileID: 0}
+    light: {fileID: 1616983029895359095, guid: 3bc2624848812cd44a2d159ad7de5965, type: 3}
     randomDistribution: 1
     color: 1
     range: 1
@@ -3930,7 +3930,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 20
+    maxLights: 180
   TrailModule:
     enabled: 0
     mode: 0
@@ -4963,7 +4963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910dc5409614a304c98765219f4a70ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  actionRef: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &6511527100136216773
 PrefabInstance:
   m_ObjectHideFlags: 0
