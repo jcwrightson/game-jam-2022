@@ -10,8 +10,6 @@ public class UIController : MonoBehaviour
 
     public Slider slider;
 
-    public Text RageText;
-
     public Gradient gradient;
 
     public Image fill;
@@ -22,7 +20,6 @@ public class UIController : MonoBehaviour
 
     void FixedUpdate()
     {
-        RageText.text = PlayerProgress.Rage.ToString();
         ScoreText.text = PlayerProgress.Score.ToString();
         slider.value = PlayerProgress.Rage;
         fill.color = gradient.Evaluate(slider.normalizedValue);
