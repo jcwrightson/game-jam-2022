@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverWin.unity
     guid: 30f57b33888eb8247b25fee33b506d3a
+  - enabled: 1
+    path: Assets/Scenes/High Scores.unity
+    guid: 3127b87a5e99fd844ad04a82d6986f33
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c6c6dc99dbe859b4e8aa4928a5cdec20, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 06c0b491b284bb34cab0ee35b1128151, type: 2}
