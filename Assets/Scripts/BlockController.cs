@@ -31,4 +31,10 @@ public class BlockController : MonoBehaviour
 
         Destroy (gameObject);
     }
+
+    void OnParticleCollision(GameObject other)
+    {
+        levelControl.Hit (ScoreValue, RageValue);
+        Destroy (gameObject);
+    }
 }

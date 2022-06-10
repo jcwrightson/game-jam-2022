@@ -184,14 +184,14 @@ public class LevelController : MonoBehaviour
 
     public void Miss(int scoreValue, int rageValue)
     {
-        PlayerProgress.IncRage (rageValue);
+        PlayerProgress.IncRage(rageValue * 2);
         CollisionCount++;
         isLevelComplete();
     }
 
     private void isLevelComplete()
     {
-        if (PlayerProgress.Rage == 101)
+        if (PlayerProgress.Rage > 100)
         {
             // Loss
             Debug.Log("Aneurysm!!!!");

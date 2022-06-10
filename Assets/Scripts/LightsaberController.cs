@@ -33,17 +33,31 @@ public class LightsaberController : MonoBehaviour
         }
     }
 
-    private void OnTrigger(InputAction.CallbackContext obj)
+    void OnDestroy()
     {
-        if (system.isEmitting)
+        actionRef = null;
+    }
+
+    private void OnTrigger(InputAction.CallbackContext context)
+    {
+        if (actionRef != null)
         {
-            system.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            audioData.Stop();
-            GetComponent<Collider>().enabled = false;
-            return;
+            float TriggerValue = context.ReadValue<float>();
+
+            if (TriggerValue > 0.8f && TriggerValue <= 1f)
+            {
+                system.Play(true);
+                audioData.Play(0);
+                GetComponent<Collider>().enabled = true;
+            }
+            else
+            {
+                system
+                    .Stop(true,
+                    ParticleSystemStopBehavior.StopEmittingAndClear);
+                audioData.Stop();
+                GetComponent<Collider>().enabled = false;
+            }
         }
-        system.Play(true);
-        audioData.Play(0);
-        GetComponent<Collider>().enabled = true;
     }
 }
