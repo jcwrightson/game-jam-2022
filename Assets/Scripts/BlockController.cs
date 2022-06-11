@@ -18,6 +18,10 @@ public class BlockController : MonoBehaviour
 
     private LevelController levelControl;
 
+    private int particleCollisions;
+
+    public int particleCollisionThreshold = 6;
+
     void Start()
     {
         levelControl = transform.parent.GetComponent<LevelController>();
@@ -37,13 +41,11 @@ public class BlockController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Hit
         if (collision.gameObject.layer == 3)
         {
             OnHit();
         }
 
-        // Miss
         if (collision.gameObject.layer == 7)
         {
             OnMiss();
@@ -52,7 +54,11 @@ public class BlockController : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        OnHit();
+        particleCollisions++;
+        if (particleCollisions >= particleCollisionThreshold)
+        {
+            OnHit();
+        }
     }
 
     void OnMiss()

@@ -113,8 +113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreValue: 1
   RageValue: 1
-  hitSoundFab: {fileID: 7066558114970951924, guid: 51ee9069f50e4c34f90eb74afc8bc2b7, type: 3}
+  hitSoundFab: {fileID: 7066558114970951924, guid: 429e25de3c8f5e949bddecc224d12dc4, type: 3}
   missSoundFab: {fileID: 0}
+  particleCollisionThreshold: 6
 --- !u!54 &2819268561575893656
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -143,6 +143,7 @@ MonoBehaviour:
   RageValue: 1
   hitSoundFab: {fileID: 7066558114970951924, guid: 51ee9069f50e4c34f90eb74afc8bc2b7, type: 3}
   missSoundFab: {fileID: 0}
+  particleCollisionThreshold: 2
 --- !u!54 &6127394578713115760
 Rigidbody:
   m_ObjectHideFlags: 0
