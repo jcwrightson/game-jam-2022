@@ -129,3 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreValue: 1
   RageValue: 1
+  hitSoundFab: {fileID: 7066558114970951924, guid: 97fc9b9ad14c0bc48a4282fb7e065ac2, type: 3}
+  missSoundFab: {fileID: 0}
