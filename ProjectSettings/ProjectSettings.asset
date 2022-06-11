@@ -197,6 +197,9 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 1619694939323089428, guid: 37c1b07269ed4d943823048d93d45d53, type: 2}
   - {fileID: 0}
   - {fileID: -7965575085077054691, guid: 06c0b491b284bb34cab0ee35b1128151, type: 2}
@@ -218,7 +221,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.iTeam.KillITwithFire
-    Standalone: com.DefaultCompany.XR-Template
+    Standalone: com.iTeam.Kill-IT-with-Fire
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -332,7 +335,14 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 05dec31e6f1cae441a5301b3ee060d08, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
