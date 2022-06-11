@@ -27,7 +27,7 @@ public class LevelController : MonoBehaviour
         PerfectScore = 0;
         CollisionCount = 0;
         PositionMemo = new List<Vector3>();
-        PlayerProgress.ResetProgress(0, 30); //Reset the Score back to 0 and rage back to 30
+        PlayerProgress.ResetProgress(0, 50); //Reset the Score back to 0 and rage back to 30
         transform.position = new Vector3(0, 0.5f, 20f); // Reset level position
         BuildLevel(PlayerProgress.Difficulty);
         LevelComplete = false;
@@ -168,7 +168,7 @@ public class LevelController : MonoBehaviour
             case 3:
                 return 0.13f;
             case 4:
-                return 0.15f;
+                return 0.14f;
             default:
                 return 0.1f;
         }
@@ -212,8 +212,8 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log("Survived...");
             LevelComplete = true;
-            PlayerProgress.SelectDifficulty(PlayerProgress.Difficulty + 1);
-            ResetLevel();
+            SceneManager.LoadScene(3); //load the win screen
+            return;
         }
     }
 }
