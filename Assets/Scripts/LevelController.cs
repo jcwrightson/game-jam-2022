@@ -27,7 +27,7 @@ public class LevelController : MonoBehaviour
         PerfectScore = 0;
         CollisionCount = 0;
         PositionMemo = new List<Vector3>();
-        PlayerProgress.ResetProgress(0, 50); //Reset the Score back to 0 and rage back to 30
+        PlayerProgress.ResetProgress(0, 50); //Reset the Score back to 0 and rage back to 50
         transform.position = new Vector3(0, 0.5f, 20f); // Reset level position
         BuildLevel(PlayerProgress.Difficulty);
         LevelComplete = false;
@@ -74,7 +74,7 @@ public class LevelController : MonoBehaviour
     private Vector3 buildVectorEasy(Vector3 lastSpawned)
     {
         float x = UnityEngine.Random.Range(-1.5f, 1.5f); // Horizontal
-        float y = UnityEngine.Random.Range(0f, 2f); // Vertical
+        float y = UnityEngine.Random.Range(0f, 1.5f); // Vertical
         float z = UnityEngine.Random.Range(2f, 5f); // Depth
         return new Vector3(x, transform.position.y + y, lastSpawned.z + z);
     }
@@ -83,22 +83,22 @@ public class LevelController : MonoBehaviour
     {
         float x = UnityEngine.Random.Range(-2f, 2f); // Horizontal
         float y = UnityEngine.Random.Range(0f, 2f); // Vertical
-        float z = UnityEngine.Random.Range(1f, 3f); // Depth
+        float z = UnityEngine.Random.Range(1f, 4f); // Depth
         return new Vector3(x, transform.position.y + y, lastSpawned.z + z);
     }
 
     private Vector3 buildVectorHard(Vector3 lastSpawned)
     {
         float x = UnityEngine.Random.Range(-2f, 2f); // Horizontal
-        float y = UnityEngine.Random.Range(0f, 3f); // Vertical
+        float y = UnityEngine.Random.Range(-1f, 3f); // Vertical
         float z = UnityEngine.Random.Range(1f, 3f); // Depth
         return new Vector3(x, transform.position.y + y, lastSpawned.z + z);
     }
 
     private Vector3 buildVectorInsane(Vector3 lastSpawned)
     {
-        float x = UnityEngine.Random.Range(-2f, 2f); // Horizontal
-        float y = UnityEngine.Random.Range(0f, 3f); // Vertical
+        float x = UnityEngine.Random.Range(-3f, 3f); // Horizontal
+        float y = UnityEngine.Random.Range(-1f, 3f); // Vertical
         float z = UnityEngine.Random.Range(0f, 2f); // Depth
         return new Vector3(x, transform.position.y + y, lastSpawned.z + z);
     }
@@ -194,7 +194,6 @@ public class LevelController : MonoBehaviour
         if (PlayerProgress.Rage > 100)
         {
             // Loss
-            Debug.Log("Aneurysm!!!!");
             LevelComplete = true;
             SceneManager.LoadScene(2); //load the fail screen
             return;
@@ -202,6 +201,7 @@ public class LevelController : MonoBehaviour
 
         if (PlayerProgress.Score == PerfectScore)
         {
+            // Perfect
             Debug.Log("Perfect Score!!");
             LevelComplete = true;
             SceneManager.LoadScene(3); //load the win screen
@@ -210,7 +210,7 @@ public class LevelController : MonoBehaviour
 
         if (CollisionCount == CalculateNoOfPieces())
         {
-            Debug.Log("Survived...");
+            // Level complete
             LevelComplete = true;
             SceneManager.LoadScene(3); //load the win screen
             return;
