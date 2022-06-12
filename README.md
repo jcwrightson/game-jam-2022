@@ -4,7 +4,7 @@ A VR game created by Game Jam 2022 team: `iTeam`
 
 - Tim Slow
 - Natalia Marek
-- Connor Gilbert
+- Conor Gilbert
 - John Wrightson
 
 ## Running the game
