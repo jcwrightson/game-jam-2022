@@ -1,19 +1,19 @@
-# Unity XR Template
+# Kill It With Fire
 
-Starter template making use of Unity's XR Interaction Toolkit and XR Plugin. Contains a basic scene with the ability to continuously move, snap turn, jump, and grab objects.
+A VR game created by Game Jam 2022 team: `iTeam`
 
-## Prerequisites
+- Tim Slow
+- Natalia Marek
+- Connor Gilbert
+- John Wrightson
 
-- Unity Version: 2021.3.1f1
-- XR toolkit: com.unity.xr.interaction.tools@2.0.1
+## Running the game
 
-## Features
+- Download the latest release
+- Find your platform located within in the `dist` directory
+    - Win: With your headset connected, run the `.exe`
+    - Android: TBC
 
-- Build support for both Windows/Android targets.
-- Oculus interaction profiles configured.
+## Controls
 
-# Get Started
-
-- Create a repo from this template
-- Open project in Unity
-- Follow prompts to install packages
+Use the trigger on your controller to fire the flamethrower or activate the lightsaber
