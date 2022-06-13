@@ -607,8 +607,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9041525258545999722, guid: 64711b7b576d0aa42a46b10ed669aa23, type: 3}
+      propertyPath: LevelEndFab
+      value: 
+      objectReference: {fileID: 1592054789096651173, guid: 603e27cd7f245b946950dfbf4d436cea, type: 3}
+    - target: {fileID: 9041525258545999722, guid: 64711b7b576d0aa42a46b10ed669aa23, type: 3}
       propertyPath: Targets.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9041525258545999722, guid: 64711b7b576d0aa42a46b10ed669aa23, type: 3}
       propertyPath: prefabs.Array.size
@@ -682,6 +686,10 @@ PrefabInstance:
       propertyPath: Targets.Array.data[11]
       value: 
       objectReference: {fileID: 4608710748076373426, guid: ca7dead64e514294e9eabbbbfb981110, type: 3}
+    - target: {fileID: 9041525258545999722, guid: 64711b7b576d0aa42a46b10ed669aa23, type: 3}
+      propertyPath: Targets.Array.data[12]
+      value: 
+      objectReference: {fileID: 647402652394428087, guid: ef1180bcb39527c4a8d76df0feafab6e, type: 3}
     - target: {fileID: 9041525258545999723, guid: 64711b7b576d0aa42a46b10ed669aa23, type: 3}
       propertyPath: m_Name
       value: Level
@@ -779,6 +787,38 @@ PrefabInstance:
       propertyPath: m_ModelPrefab
       value: 
       objectReference: {fileID: 4176461369329732777, guid: edf5d4f9306c92f4ebb60e8ccc8847d2, type: 3}
+    - target: {fileID: 5234257913902403132, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_Reverb
+      value: -1630
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234257913902403132, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_RoomHF
+      value: -4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234257913902403132, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_DecayTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234257913902403132, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_Reflections
+      value: -1831
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234257913902403132, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_DecayHFRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234257913902403132, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_ReverbPreset
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234257913902403132, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_ReflectionsDelay
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355723673385766227, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
 --- !u!1 &553847869
