@@ -16,6 +16,9 @@ A VR game created by Game Jam 2022 team: `iTeam`
 
 ### Windows
 
+1. Open the desktop on the Quest via airlink (instructions can be found here https://uploadvr.com/how-to-air-link-pc-vr-quest-2/)
+2. Run 'killitwithfire.exe' and the game will begin
+
 ### Android/Mac/Linux
 
 1. Go to [https://sidequestvr.com/download](https://sidequestvr.com/download) and download Sidequest app for Mac or Linux (note that mobile app won’t work for this use case!) and install it on your system.
