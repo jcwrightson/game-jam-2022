@@ -17,7 +17,6 @@ public class LevelController : MonoBehaviour
 
     private bool LevelComplete = true;
 
-    public int CollisionCount = 0;
 
     void Start()
     {
@@ -27,7 +26,6 @@ public class LevelController : MonoBehaviour
     private void ResetLevel()
     {
         PerfectScore = 0;
-        CollisionCount = 0;
         PositionMemo = new List<Vector3>();
         PlayerProgress.ResetProgress(0, 50); //Reset the Score back to 0 and rage back to 50
         transform.position = new Vector3(0, 0.5f, 20f); // Reset level position
@@ -183,14 +181,13 @@ public class LevelController : MonoBehaviour
     {
         PlayerProgress.DecRage (rageValue);
         PlayerProgress.IncScore (scoreValue);
-        CollisionCount++;
         isGameOver();
     }
 
     public void Miss(int scoreValue, int rageValue)
     {
         PlayerProgress.IncRage(rageValue * 2);
-        CollisionCount++;
+
         isGameOver();
     }
 

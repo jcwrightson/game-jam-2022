@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 856735046}
-  m_IndirectSpecularColor: {r: 0.015585194, g: 0.015585194, b: 0.015585194, a: 1}
+  m_IndirectSpecularColor: {r: 0.0012062844, g: 0.0012062844, b: 0.0012062844, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,7 +241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -237, y: 148.9999}
+  m_AnchoredPosition: {x: -237, y: 193}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145511053
@@ -705,7 +705,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2693223850054390913, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
       propertyPath: field of view
-      value: 60.000004
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693223850054390913, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
+      propertyPath: far clip plane
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2693223850134164024, guid: b97ed3f4356ec1e44877146a479646f5, type: 3}
       propertyPath: m_Constraints
