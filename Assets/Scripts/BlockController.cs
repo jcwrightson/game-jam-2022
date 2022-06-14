@@ -41,14 +41,20 @@ public class BlockController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 3)
+        Debug.Log(gameObject.layer.ToString());
+        Debug.Log(collision.gameObject.layer.ToString());
+        if (collision.gameObject.layer == 3 && gameObject.layer != 9)
         {
             OnHit();
         }
 
-        if (collision.gameObject.layer == 7)
+        if (collision.gameObject.layer == 7 && gameObject.layer != 9)
         {
             OnMiss();
+        }
+
+        if (collision.gameObject.layer == 7 && gameObject.layer == 9){
+            levelControl.EndLevel();
         }
     }
 

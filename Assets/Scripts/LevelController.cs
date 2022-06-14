@@ -7,6 +7,8 @@ public class LevelController : MonoBehaviour
 {
     public List<GameObject> Targets;
 
+    public GameObject LevelEndFab;
+
     private List<Vector3> PositionMemo;
 
     private PlayerProgress progress;
@@ -61,6 +63,9 @@ public class LevelController : MonoBehaviour
                 PerfectScore +=
                     Target.GetComponent<BlockController>().ScoreValue;
         }
+
+        Vector3 finalPos = buildPosition(CalculateNoOfPieces(), 0);
+        Instantiate(LevelEndFab, finalPos, transform.rotation, transform);
     }
 
     private Vector3 buildVectorDebug(Vector3 lastSpawned)
@@ -179,17 +184,17 @@ public class LevelController : MonoBehaviour
         PlayerProgress.DecRage (rageValue);
         PlayerProgress.IncScore (scoreValue);
         CollisionCount++;
-        isLevelComplete();
+        isGameOver();
     }
 
     public void Miss(int scoreValue, int rageValue)
     {
         PlayerProgress.IncRage(rageValue * 2);
         CollisionCount++;
-        isLevelComplete();
+        isGameOver();
     }
 
-    private void isLevelComplete()
+    private void isGameOver()
     {
         if (PlayerProgress.Rage > 100)
         {
@@ -207,13 +212,11 @@ public class LevelController : MonoBehaviour
             SceneManager.LoadScene(3); //load the win screen
             return;
         }
+    }
 
-        if (CollisionCount == CalculateNoOfPieces())
-        {
-            // Level complete
-            LevelComplete = true;
-            SceneManager.LoadScene(3); //load the win screen
-            return;
-        }
+    public void EndLevel()
+    {
+        LevelComplete = true;
+        SceneManager.LoadScene(3); //load the win screen
     }
 }

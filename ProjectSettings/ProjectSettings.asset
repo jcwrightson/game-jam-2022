@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: iTeam
-  productName: Kill IT with Fire
+  productName: KILL IT WITH FIRE
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -51,7 +51,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 0
+  m_ActiveColorSpace: 1
   m_MTRendering: 1
   mipStripping: 0
   numberOfMipsStripped: 0
@@ -210,6 +210,11 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: c6c6dc99dbe859b4e8aa4928a5cdec20, type: 2}
+  - {fileID: 3466113672366742284, guid: 37c1b07269ed4d943823048d93d45d53, type: 2}
+  - {fileID: 0}
+  - {fileID: -7070829120583665900, guid: 06c0b491b284bb34cab0ee35b1128151, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -237,7 +242,7 @@ PlayerSettings:
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0

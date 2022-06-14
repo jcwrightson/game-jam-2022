@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8133553737179217014}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.14852624, y: -0, z: -0, w: 0.9889085}
   m_LocalPosition: {x: 0.046829224, y: 4.74, z: -1}
   m_LocalScale: {x: 0.12909965, y: 0.12909965, z: 0.12909965}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -17.083, y: 0, z: 0}
 --- !u!33 &5477568184508836201
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -255,5 +255,5 @@ MonoBehaviour:
   ScoreValue: 1
   RageValue: 1
   hitSoundFab: {fileID: 7066558114970951924, guid: 51ee9069f50e4c34f90eb74afc8bc2b7, type: 3}
-  missSoundFab: {fileID: 0}
+  missSoundFab: {fileID: 7066558114970951924, guid: b1eb0b7803597fb4589bbb8b4dec045d, type: 3}
   particleCollisionThreshold: 6
