@@ -1,6 +1,8 @@
 # Kill It With Fire 🔥
 
-A VR game created by Game Jam 2022 team: `iTeam`
+[VIDEO TRAILER](https://www.youtube.com/watch?v=PT0tUDpxPB4)
+
+A VR game created by Game Jam 2022 team: **iTeam**.
 
 - Tim Slow
 - Natalia Marek
