@@ -25,7 +25,7 @@ A VR game created by Game Jam 2022 team: **iTeam**.
 
 1. Go to [https://sidequestvr.com/download](https://sidequestvr.com/download) and download Sidequest app for Mac or Linux (note that mobile app won’t work for this use case!) and install it on your system.
 2. In order to upload the game as APK to your headset you will have to [Oculus developer platform](https://developer.oculus.com/manage/organizations/) and create new organization, by entering a name of the organization (unique name) and agreeing to terms)
-3. Open the Oculus app on your phone, tablet or PC, go to Devices, select Developer moge and toggle it.
+3. Open the Oculus app on your phone, tablet or PC, go to Devices, select Developer mode and toggle it.
 4. Next connect your Oculus headset via cable to your Mac, Windows or Linux and Allow USB Debugging (make sure to check Always allow from this computer).
 5. Open SideQuest app and you should be able to see green dot in the top left corner indicating that your Oculus device is connected.
 
