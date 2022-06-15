@@ -47,7 +47,10 @@ public class LightsaberController : MonoBehaviour
             if (TriggerValue > 0.8f && TriggerValue <= 1f)
             {
                 system.Play(true);
-                audioData.Play(0);
+                if (!audioData.isPlaying)
+                {
+                    audioData.Play(0);
+                }
                 GetComponent<Collider>().enabled = true;
             }
             else
