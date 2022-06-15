@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02523907, g: 0.025450444, b: 0.02523052, a: 1}
+  m_IndirectSpecularColor: {r: 0.0023878268, g: 0.0023860345, b: 0.0023879763, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1749,7 +1749,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "COVID is over and you've been RTO'd. Those pesky little things that agitate
     you seem to be distilling an ever growing rage. \n\nRAGE spreads throughout your
-    body. Bursting into a frenzy. You begin destoying everything around you! \n\nDESTROY
+    body. Bursting into a frenzy. You begin destroying everything around you! \n\nDESTROY
     the items of corporate enslavement to regain your inner peace! \n\nChoose your
     destiny ..."
 --- !u!222 &702123558
